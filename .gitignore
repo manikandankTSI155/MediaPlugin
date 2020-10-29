@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MediaPluginIssue/obj
+/.vs/MediaPluginIssue
+/MediaPluginIssue.Android/obj

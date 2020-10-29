@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaPluginIssue.MainPage">
+
+    <StackLayout Margin="10">
+        <Button x:Name="takePhoto" Text="Take Photo" Command="{Binding TakePhotoCommand}"/>
+        <CollectionView x:Name="collectionList"   
+                        
+                                HorizontalScrollBarVisibility="Default"
+                                Margin="5"  ItemsSource="{Binding ImageSources}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                        Span="3" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                        <Frame BorderColor="#4b4b52" 
+                                         Margin="5" CornerRadius="6"
+                                       Padding="10" 
+                                       HasShadow="False">
+                        <Image  Source="{Binding ImageURL}" Aspect="AspectFill" HeightRequest="200" 
+                                                WidthRequest="200" />
+                        </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
